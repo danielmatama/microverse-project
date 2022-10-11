@@ -13,19 +13,23 @@ main {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-  }
+}
 
 #navbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     padding: 10px;
     width: 100%;
     background: var(--main-red);
     box-shadow: 0 2px 0 rgb(0 0 0 / 40%);
     background-color: #414141;
+    position: fixed;
+    top: 0;
 }
+
+
+
 
 #navbar ul li {
     display: inline;
@@ -53,10 +57,18 @@ main {
     font-family: Verdana, Tahoma, sans-serif;
 }
 
+
 #welcome-section h1 {
     margin-top: 10%;
-    font-size: 3rem;
+
     padding-bottom: 10px;
+    font-size: 3rem;
+}
+
+@media (max-width: 766px) {
+    #welcome-section h1{
+        font-size: 2rem;
+    }
 }
 
 #welcome-section p {
@@ -69,10 +81,17 @@ main {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    flex-direction: row;
 }
 
-.project-title{
-    font-size: 1rem;
+@media (max-width: 520px) {
+    #project{
+        flex-direction: column;
+    }
+}
+
+.project-title {
+    font-size: 1.5rem;
     font-family: 'Segoe UI', sans-serif;
     padding-bottom: 5px;
 }
@@ -89,11 +108,21 @@ main {
     border-radius: 20px;
 }
 
-.card h4{
+.card h4 {
     padding-top: 5px;
 }
 
-.card img{
+@media (max-width: 766px) {
+    .card h4{
+        font-size: 1rem;
+    }
+}
+
+.card p {
+    color: aliceblue;
+}
+
+.card img {
     width: 100%;
 }
 
